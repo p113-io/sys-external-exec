@@ -22,3 +22,14 @@ El script `auto-update-setup` realiza las siguientes tareas:
    ```bash
    wget -qO- https://raw.githubusercontent.com/p113-io/sys-external-exec/main/auto-update-setup.sh | sudo bash
    ```
+## Script de Configuración sudoers (`sudoers-setup.sh`)
+
+Este script `sudoers-setup.sh` realiza las siguientes acciones:
+
+1. Crea una copia de seguridad del archivo sudoers en la ubicación `/etc/sudoers.bak`.
+2. Agrega nuevas entradas al archivo sudoers utilizando el comando `sed`.
+3. Verifica la sintaxis del archivo sudoers utilizando el comando `visudo`.
+
+Este script es útil para realizar modificaciones en el archivo sudoers de forma automatizada y realizar respaldos en caso de errores.
+
+**Nota:** Asegúrese de ejecutar este script con privilegios de administrador utilizando el comando `sudo`.
